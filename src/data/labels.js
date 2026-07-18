@@ -1,4 +1,4 @@
-window.makeEasyHolidayLabels = {
+export const labels = {
   siteTitle: 'MakeEasyHoliday - Your Dream Vacation',
   logo: {
     brand: 'MakeEasy',
@@ -192,3 +192,5 @@ window.makeEasyHolidayLabels = {
   },
   whatsappHref: 'https://wa.me/919876543210?text=Hi!%20I%20want%20to%20plan%20a%20trip.'
 };
+
+export default labels;

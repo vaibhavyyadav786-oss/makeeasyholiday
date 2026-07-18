@@ -13,10 +13,11 @@ import { ExcelService } from './services/excelService.js';
 import { validateEmail, validatePhone, validateForm } from './utils/validators.js';
 import { Loader } from './components/Loader/Loader.js';
 import { Toast } from './components/Toast/Toast.js';
+import { labels } from './data/labels.js';
 
 class App {
   constructor() {
-    this.labels = window.makeEasyHolidayLabels || {};
+    this.labels = labels;
     this.excelService = new ExcelService();
     this.header = null;
     this.hero = null;
