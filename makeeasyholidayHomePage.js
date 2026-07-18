@@ -242,9 +242,27 @@
     let currentIndex = 0;
 
     const scrollToSlide = (index) => {
-      currentIndex = (index + slides.length) % slides.length;
-      slides[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-    };
+        currentIndex = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, i) => {
+          const video = slide.querySelector("video");
+
+          if (video) {
+            if (i === currentIndex) {
+              video.currentTime = 0;
+              video.play().catch(() => {});
+            } else {
+              video.pause();
+            }
+          }
+        });
+
+        slides[currentIndex].scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "start",
+        });
+      };
 
     sliderIntervalId = window.setInterval(() => scrollToSlide(currentIndex + 1), 5000);
     slider.addEventListener('mouseenter', () => window.clearInterval(sliderIntervalId));
