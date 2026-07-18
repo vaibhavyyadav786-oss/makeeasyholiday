@@ -23,13 +23,13 @@ window.makeEasyHolidayLabels = {
       { value: '3', label: 'Family (3+ Guests)' }
     ],
     slides: [
-      { videoSrc: 'Mountains.mp4', label: '🏔️ Mountains' },
-      { videoSrc: 'Beaches.mp4', label: '🏖️ Beaches' },
-      { videoSrc: 'Desert.mp4', label: '🐪 Deserts' },
-      { videoSrc: 'Forts.mp4', label: '🏰 Heritage & Forts' },
-      { videoSrc: 'Temple.mp4', label: '🕉️ Spiritual & Temples' },
-      { videoSrc: 'wildlife.mp4', label: '🐅 Wildlife & Safaris' },
-      { videoSrc: 'Lakes.mp4', label: '🛶 Lakes & Backwaters' }
+      { videoSrc: 'https://res.cloudinary.com/vm7ddovm/video/upload/v1784380800/Mountains_Compressed_l2q7uc.mp4', label: '🏔️ Mountains' },
+      { videoSrc: 'https://res.cloudinary.com/vm7ddovm/video/upload/v1784380984/Beaches_kibknq.mp4', label: '🏖️ Beaches' },
+      { videoSrc: 'https://res.cloudinary.com/vm7ddovm/video/upload/v1784382001/Desert_fbqvps.mp4', label: '🐪 Deserts' },
+      { videoSrc: 'https://res.cloudinary.com/vm7ddovm/video/upload/v1784382002/Forts_qozrya.mp4', label: '🏰 Heritage & Forts' },
+      { videoSrc: 'https://res.cloudinary.com/vm7ddovm/video/upload/v1784382018/Temple_nykbmz.mp4', label: '🕉️ Spiritual & Temples' },
+      { videoSrc: 'https://res.cloudinary.com/vm7ddovm/video/upload/v1784382006/wildlife_w4awoe.mp4', label: '🐅 Wildlife & Safaris' },
+      { videoSrc: 'https://res.cloudinary.com/vm7ddovm/video/upload/v1784382008/Lakes_a3eifc.mp4', label: '🛶 Lakes & Backwaters' }
     ]
   },
   destinations: {
