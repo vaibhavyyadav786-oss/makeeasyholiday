@@ -1,0 +1,903 @@
+/* ==========================================================================
+   MakeEasyHoliday - Master Stylesheet
+   ========================================================================== */
+
+/* --- 1. BASIC RESET & GLOBAL STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- 2. NAVBAR & HEADER --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #2c3e50;
+}
+
+.logo h2 {
+    color: white;
+}
+
+.logo span {
+    color: #f39c12;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.nav-auth {
+    margin-left: 30px;
+}
+
+.login-btn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(243, 156, 18, 0.3);
+}
+
+/* --- 3. HERO SECTION & VIDEO SLIDER --- */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed-overlay {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.fixed-overlay form {
+    pointer-events: auto;
+}
+
+.slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    position: relative;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.slide-theme-name {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.video-overlay {
+    z-index: 1;
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 900px;
+}
+
+.video-overlay h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.video-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* --- 4. FORMS (Search & Glassmorphism) --- */
+.glass-form {
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-form input, 
+.glass-form select, 
+.glass-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.glass-form input[type="text"] {
+    flex: 2;
+}
+
+.glass-form button {
+    background-color: #ff5722;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+    transition: background-color 0.3s ease;
+}
+
+.glass-form button:hover {
+    background-color: #e64a19;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.search-form input, 
+.search-form select, 
+.search-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-form input[type="text"] {
+    flex: 2;
+}
+
+.search-form button {
+    background-color: #f39c12;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* --- 5. DESTINATIONS (Theme Cards) --- */
+.destinations {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+/* --- THEME CARD BUTTON STYLING --- */
+.card-btn {
+    display: inline-block;
+    background-color: #f39c12; /* Theme ka dhyan kheenchne wala orange color */
+    color: #ffffff !important; /* Text hamesha white rahega */
+    text-decoration: none; /* Link ke neeche ki line hatane ke liye */
+    padding: 10px 22px;
+    border-radius: 25px; /* Edges ko smooth aur gol banane ke liye */
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Hover Effect (Jab mouse button par aaye) */
+.card-btn:hover {
+    background-color: #e67e22; /* Thoda dark shade */
+    transform: translateY(-3px); /* Button thoda upar uthega */
+    box-shadow: 0 6px 15px rgba(243, 156, 18, 0.4); /* Orange glowing shadow */
+}
+
+/* --- 6. FEATURES (Why Choose Us) --- */
+.features {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* --- 7. CUSTOMER REVIEWS (Infinite Scroll) --- */
+.testimonials {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-subtitle {
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
+.marquee-track {
+    display: inline-block;
+    animation: scroll-left 40s linear infinite;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.review-card {
+    display: inline-block;
+    white-space: normal;
+    width: 350px;
+    margin: 0 15px;
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.stars {
+    color: #f39c12;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.review-card p {
+    font-style: italic;
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.reviewer img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.reviewer-info h4 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.reviewer-info span {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* --- 8. LEAD GENERATION FORM --- */
+.lead-magnet {
+    background-color: #f4f6f9;
+    padding: 60px 20px;
+}
+
+.lead-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.lead-text {
+    background-color: #2c3e50;
+    color: white;
+    padding: 50px;
+    flex: 1;
+}
+
+.lead-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.lead-text ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.lead-text li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.lead-form-box {
+    padding: 50px;
+    flex: 1.2;
+}
+
+.lead-form-box h3 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.custom-quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+
+.custom-quote-form input, 
+.custom-quote-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.submit-lead-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-lead-btn:hover {
+    background-color: #d68910;
+}
+
+/* --- 9. NEWSLETTER SECTION ---
+.newsletter {
+    background-color: #2980b9;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.subscribe-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    padding: 15px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+.subscribe-form button {
+    padding: 15px 30px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #d68910;
+} */
+
+/* --- 10. LOGIN / SIGN UP MODAL --- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+}
+
+.modal:target .modal-content {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    color: #7f8c8d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #e74c3c;
+}
+
+.modal-header h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.modal-header p {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #95a5a6;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #f39c12;
+    outline: none;
+}
+
+.submit-login-btn {
+    width: 100%;
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.submit-login-btn:hover {
+    background: #e67e22;
+}
+
+.signup-link {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- 11. MEGA FOOTER --- */
+.footer {
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    padding: 50px 20px 20px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-col a {
+    color: #bdc3c7;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: #f39c12;
+}
+
+.footer-col i {
+    width: 25px;
+    text-align: center;
+    margin-right: 1px;
+    color: #f39c12;
+}
+
+.social-links p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #34495e;
+    border-radius: 50%;
+    color: white !important;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.social-icons .insta:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icons .fb:hover {
+    background-color: #1877F2;
+}
+
+.social-icons .yt:hover {
+    background-color: #FF0000;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+}
+
+/* --- 12. WHATSAPP BUTTON --- */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-btn img {
+    width: 35px;
+}
+/* --- OTP VERIFICATION ROW STYLING --- */
+.otp-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.verify-btn {
+    background-color: #2c3e50; /* Dark premium color */
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    white-space: nowrap; /* Text ko ek line me rakhega */
+    transition: background 0.3s ease;
+}
+
+.verify-btn:hover {
+    background-color: #27ae60; /* Hover par green yani 'Success' wali feel dega */
+}
+
+/* ==========================================================================
+   13. MOBILE RESPONSIVE (Media Queries)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .nav-auth {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .hero-content {
+        padding: 20px;
+        width: 90%;
+    }
+    .hero-content h1, .video-overlay h1 {
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .subscribe-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .subscribe-form input,
+    .subscribe-form button {
+        width: 100%;
+        max-width: 350px;
+    }
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .glass-form, .search-form {
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .glass-form input, 
+    .glass-form select, 
+    .glass-form button,
+    .search-form input, 
+    .search-form select, 
+    .search-form button {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+    .lead-container {
+        flex-direction: column;
+    }
+    .input-row {
+        flex-direction: column;
+    }
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-col .social-icons,
+    .footer-col div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+}
