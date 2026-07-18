@@ -256,12 +256,6 @@
             }
           }
         });
-
-        slides[currentIndex].scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-          inline: "start",
-        });
       };
 
     sliderIntervalId = window.setInterval(() => scrollToSlide(currentIndex + 1), 5000);
