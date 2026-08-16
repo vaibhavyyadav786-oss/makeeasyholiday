@@ -154,7 +154,7 @@ export const labels = {
     ],
     contactTitle: 'Contact Us',
     email: 'makeeasyholiday@gmail.com',
-    phone: '+91 8955721614',
+    phone: '+91 9783721614',
     location: 'Jaipur, Rajasthan, India',
     socialTitle: 'Follow Us',
     socialDescription: 'Connect with us on social media for daily travel inspiration!',
