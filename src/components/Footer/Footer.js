@@ -26,9 +26,24 @@ export class Footer {
           
           <div class="footer-col">
             <h3>${escapeHtml(this.labels.footer.contactTitle)}</h3><br>
-            <p style="margin-bottom: 12px;"><i class="fas fa-envelope" style="margin-right: 8px;"></i> ${escapeHtml(this.labels.footer.email)}</p>
-            <p style="margin-bottom: 12px;"><i class="fas fa-mobile-alt" style="margin-right: 8px;"></i> ${escapeHtml(this.labels.footer.phone)}</p>
-            <p><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> ${escapeHtml(this.labels.footer.location)}</p>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+              
+              <div style="display: flex; align-items: flex-start;">
+                <i class="fas fa-envelope" style="width: 20px; text-align: center; margin-right: 10px; margin-top: 4px;"></i> 
+                <span style="word-break: break-word; line-height: 1.5;">${escapeHtml(this.labels.footer.email)}</span>
+              </div>
+              
+              <div style="display: flex; align-items: flex-start;">
+                <i class="fas fa-mobile-alt" style="width: 20px; text-align: center; margin-right: 10px; margin-top: 4px;"></i> 
+                <span style="line-height: 1.5;">${escapeHtml(this.labels.footer.phone)}</span>
+              </div>
+              
+              <div style="display: flex; align-items: flex-start;">
+                <i class="fas fa-map-marker-alt" style="width: 20px; text-align: center; margin-right: 10px; margin-top: 4px;"></i> 
+                <span style="line-height: 1.5;">${escapeHtml(this.labels.footer.location)}</span>
+              </div>
+              
+            </div>
           </div>
           
           <div class="footer-col social-links">
