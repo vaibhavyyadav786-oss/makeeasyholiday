@@ -24,9 +24,9 @@ export class Footer {
             </div>
           </div>
           
-          <div class="footer-col">
+          <div class="footer-col" style="text-align: center;">
             <h3>${escapeHtml(this.labels.footer.contactTitle)}</h3><br>
-            <div style="display: flex; flex-direction: column; gap: 15px;">
+            <div style="display: flex; flex-direction: column; gap: 15px; margin: 0 auto; width: fit-content; text-align: left;">
               
               <div style="display: flex; align-items: flex-start;">
                 <i class="fas fa-envelope" style="width: 20px; text-align: center; margin-right: 10px; margin-top: 4px;"></i> 
