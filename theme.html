@@ -1,87 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour Packages - MakeEasyHoliday</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MakeEasyHoliday - Tour Packages</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
 
-    <nav class="navbar">
-        <div class="logo">
-            <h2>MakeEasy<span>Holiday</span></h2>
-        </div>
-        <div class="nav-links">
-            <a href="makeeasyholidayHomePage.html">Home</a> 
-            <a href="theme.html">Packages</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="nav-auth">
-            <a href="#login-modal" class="login-btn" style="text-decoration: none;">
-                <i class="fas fa-user-circle"></i> Login / Sign Up
-            </a>
-        </div>
-    </nav>
-
-    <main style="min-height: 60vh; padding: 40px 20px; background-color: #f4f6f9;">
-        
-        <h1 style="text-align: center; color: #2c3e50; font-size: 2.5rem; margin-bottom: 20px;">
-            Explore Our Destinations
-        </h1>
-        <p style="text-align: center; color: #7f8c8d; margin-bottom: 40px; font-size: 1.1rem;">
-            Select a theme below to view customized packages.
-        </p>
-
-        <div id="theme-content-placeholder" style="text-align: center;">
-            <p><i>[Theme Tabs and Detailed Package Cards will be designed here]</i></p>
-        </div>
-
-    </main>
-
-    <footer id="contact" class="footer">
-        <div class="footer-columns">
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <br>
-                <a href="about.html">About Us</a>
-                <a href="theme.html">All Destinations</a>
-                <a href="#custom-tour">Custom Tour Planner</a>
-                <a href="privacy.html">Privacy Policy</a>
-            </div>
-
-            <div class="footer-col">
-                <h3>Contact Us</h3>
-                <br>
-                <div>
-                    <a href="mailto:makeeasyholiday@gmail.com"><i class="fas fa-envelope"></i> makeeasyholiday@gmail.com</a>
-                    <a href="tel:+918955721614"><i class="fas fa-mobile-alt"></i> +91 8955721614</a>
-                    <p style="margin-top: 10px;"><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan, India</p>
+        <header class="navbar">
+            <nav class="navbar">
+                <div class="logo">
+                    <h2>MakeEasy<span>Holiday</span></h2>
                 </div>
-            </div>
+                
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="#packages-section" class="active">Packages</a>
+                    <a href="#contact-section">Contact</a>
+                </div>
+                
+                <div class="nav-auth">
+                    <a href="#login-modal" class="login-btn" style="text-decoration: none;">
+                        <i class="fas fa-user-circle"></i> Login / Sign Up
+                    </a>
+                </div>
+            </nav>
+        </header>
 
-            <div class="footer-col">
-                <h3>Follow Us</h3>
-                <br>
-                <div class="social-links">
-                    <p>Connect with us on social media!</p>
+        <main style="min-height: 60vh; padding: 100px 20px 40px; background-color: #f4f6f9;">
+            <h1 style="text-align: center; color: #2c3e50; font-size: 2.5rem; margin-bottom: 20px;">
+                Explore Our Destinations
+            </h1>
+            <p style="text-align: center; color: #7f8c8d; margin-bottom: 40px; font-size: 1.1rem;">
+                Here are the best packages curated just for you.
+            </p>
+
+            <div id="packages-container" class="card-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                <p><i>Loading amazing packages...</i></p>
+            </div>
+        </main>
+
+        <footer class="footer" id="contact-section">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>MakeEasyHoliday</h3><br>
+                    <p>Your ultimate travel partner for discovering India's most beautiful destinations.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3><br>
+                    <a href="index.html">About Us</a>
+                    <a href="#">All Destinations</a>
+                    <a href="#">Custom Tour Planner</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3><br>
+                    <p><i class="fas fa-envelope"></i> makeeasyholiday@gmail.com</p>
+                    <p><i class="fas fa-mobile-alt"></i> +91 8955721614</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan, India</p>
+                </div>
+
+                <div class="footer-col social-links">
+                    <h3>Follow Us</h3><br>
+                    <p>Connect with us on social media for daily travel inspiration!</p>
                     <div class="social-icons">
-                        <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com/makeeasyholiday" target="_blank" class="insta"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="yt"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 MakeEasyHoliday. All rights reserved. Designed with ❤️ in India.</p>
-        </div>
-    </footer>
+            
+            <div class="footer-bottom">
+                <p>© 2026 MakeEasyHoliday. All rights reserved. Designed with ❤️ in India.</p>
+            </div>
+        </footer>
 
-    <a href="https://wa.me/918955721614" class="whatsapp-btn" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
+        <a href="https://wa.me/918955721614?text=Hi!%20I%20want%20to%20plan%20a%20trip." target="_blank" class="whatsapp-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
 
-    </body>
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close-btn">×</a>
+                <div class="modal-header">
+                    <h2>Welcome Back!</h2>
+                    <p>Sign in to unlock <span style="color: #f39c12; font-weight: bold;">Secret Travel Deals</span>.</p>
+                </div>
+                <form class="login-form">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="submit-login-btn">Login to Continue</button>
+                </form>
+                <p class="signup-link">New Traveler? <a href="#signup-modal">Create an account</a></p>
+            </div>
+        </div>
+
+        <div id="signup-modal" class="modal">
+            <div class="modal-content" style="max-width: 450px;"> 
+                <a href="#" class="close-btn">×</a>
+                <div class="modal-header">
+                    <h2>Join <span style="color: #f39c12;">MakeEasyHoliday</span></h2>
+                    <p>Create your account for exclusive travel deals.</p>
+                </div>
+                <form class="login-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="otp-row">
+                        <div class="input-group" style="margin-bottom: 0; flex: 1;">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <button type="button" class="verify-btn">Get OTP</button>
+                    </div>
+                    <div class="otp-row">
+                        <div class="input-group" style="margin-bottom: 0; flex: 1;">
+                            <i class="fas fa-mobile-alt"></i>
+                            <input type="tel" placeholder="Mobile Number" required>
+                        </div>
+                        <button type="button" class="verify-btn">Get OTP</button>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-check-circle" style="color: #27ae60;"></i>
+                        <input type="text" placeholder="Enter 6-digit OTP" style="border: 1px solid #27ae60;">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Create Password" required>
+                    </div>
+                    <button type="submit" class="submit-login-btn">Create Verified Account</button>
+                </form>
+                <p class="signup-link">Already a traveler? <a href="#login-modal">Login here</a></p>
+            </div>
+        </div>
+
+        </body>
 </html>
