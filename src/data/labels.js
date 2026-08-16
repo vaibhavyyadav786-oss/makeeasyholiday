@@ -159,7 +159,7 @@ export const labels = {
     socialTitle: 'Follow Us',
     socialDescription: 'Connect with us on social media for daily travel inspiration!',
     socialLinks: [
-      { href: 'https://instagram.com/your_page', className: 'insta', icon: 'fab fa-instagram' },
+      { href: 'https://instagram.com/makeeasyholiday', className: 'insta', icon: 'fab fa-instagram' },
       { href: 'https://facebook.com', className: 'fb', icon: 'fab fa-facebook-f' },
       { href: 'https://youtube.com', className: 'yt', icon: 'fab fa-youtube' }
     ],
