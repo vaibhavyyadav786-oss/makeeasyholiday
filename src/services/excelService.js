@@ -5,7 +5,7 @@ export class ExcelService {
   constructor() {
     this.storage = new StorageService();
     // Niche single quotes (' ') ke andar apna lamba wala Google Web App URL paste karein:
-    this.scriptUrl = 'https://script.google.com/macros/s/AKfycbwGInXQGdOya3NGhX6uPjI0HtlnXiz_o5YLCo_-DHjoMPBborlgA3bwtE8qgG9Zy7jPDA/exec';
+    this.scriptUrl = 'https://script.google.com/macros/s/AKfycbxMojt-Lof4KqOIakC5wruZBB8x8XpYeVW-0AGkxD5mKN0UFoteOu0cqSzsFcyGbYd0/exec';
   }
 
   async submitInquiry(payload) {
