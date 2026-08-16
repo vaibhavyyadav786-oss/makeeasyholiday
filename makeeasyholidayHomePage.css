@@ -975,3 +975,7 @@ body {
     justify-content: center;
   }
 }
+#faq-root *, .footer-bottom p {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+}
