@@ -3,8 +3,6 @@ html, body {
     -moz-text-size-adjust: 100% !important;
     text-size-adjust: 100% !important;
 }
-
-/* FAQ aur Footer Bottom ko center mein align rakhne ke liye */
 #faq-root, .footer-bottom {
     max-width: 1200px;
     margin: 0 auto;
