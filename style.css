@@ -291,11 +291,11 @@ html {
 /* --- THEME CARD BUTTON STYLING --- */
 .card-btn {
     display: inline-block;
-    background-color: #f39c12; /* Theme ka dhyan kheenchne wala orange color */
-    color: #ffffff !important; /* Text hamesha white rahega */
-    text-decoration: none; /* Link ke neeche ki line hatane ke liye */
+    background-color: #f39c12; 
+    color: #ffffff !important;
+    text-decoration: none; 
     padding: 10px 22px;
-    border-radius: 25px; /* Edges ko smooth aur gol banane ke liye */
+    border-radius: 25px; 
     font-weight: bold;
     font-size: 0.95rem;
     margin-top: 15px;
@@ -305,11 +305,11 @@ html {
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-/* Hover Effect (Jab mouse button par aaye) */
+/* Hover Effect */
 .card-btn:hover {
-    background-color: #e67e22; /* Thoda dark shade */
-    transform: translateY(-3px); /* Button thoda upar uthega */
-    box-shadow: 0 6px 15px rgba(243, 156, 18, 0.4); /* Orange glowing shadow */
+    background-color: #e67e22; 
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(243, 156, 18, 0.4);
 }
 
 /* --- 6. FEATURES (Why Choose Us) --- */
@@ -801,7 +801,7 @@ html {
 }
 
 .verify-btn {
-    background-color: #2c3e50; /* Dark premium color */
+    background-color: #2c3e50; 
     color: white;
     border: none;
     padding: 0 15px;
@@ -809,12 +809,12 @@ html {
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
-    white-space: nowrap; /* Text ko ek line me rakhega */
+    white-space: nowrap; 
     transition: background 0.3s ease;
 }
 
 .verify-btn:hover {
-    background-color: #27ae60; /* Hover par green yani 'Success' wali feel dega */
+    background-color: #27ae60; 
 }
 
 /* ==========================================================================
