@@ -25,7 +25,6 @@ class ThemeApp {
     const root = document.getElementById('theme-shell');
     if (!root) return;
 
-    // Yahan hum sirf khali dabbe (divs) bana rahe hain
     root.innerHTML = `
       <header id="site-header"></header>
       
@@ -46,23 +45,15 @@ class ThemeApp {
       <div id="signup-modal-root"></div>
       <div id="whatsapp-root"></div>
     `;
-
-    // 1. Same Header load karein
     this.header = new Header({ container: document.getElementById('site-header'), labels: this.labels });
     this.header.render();
-
-    // 2. Same Footer load karein
     this.footer = new Footer({ container: document.getElementById('site-footer'), labels: this.labels });
     this.footer.render();
-
-    // 3. Same Modals load karein
     this.loginModal = new LoginModal({ container: document.getElementById('login-modal-root'), labels: this.labels, onSubmit: (v) => console.log(v) });
     this.loginModal.render();
 
     this.signupModal = new SignupModal({ container: document.getElementById('signup-modal-root'), labels: this.labels, onSubmit: (v) => console.log(v) });
     this.signupModal.render();
-
-    // 4. Same WhatsApp Button load karein
     this.whatsApp = new WhatsAppButton({ 
         container: document.getElementById('whatsapp-root'), 
         href: this.labels.whatsappHref || 'https://wa.me/918955721614?text=Hi!', 
@@ -72,7 +63,6 @@ class ThemeApp {
   }
 
   bindGlobalEvents() {
-    // Popup band karne ka logic
     document.addEventListener('click', (event) => {
       const target = event.target;
       if (target.matches('.close-btn')) {
@@ -86,13 +76,10 @@ class ThemeApp {
   }
 
   loadPackages() {
-    // Yeh humara agla step hoga! Yahan hum check karenge ki user ne kaunsa package click kiya hai
     const urlParams = new URLSearchParams(window.location.search);
     const themeType = urlParams.get('type');
     console.log("Customer ne select kiya hai:", themeType);
   }
 }
-
-// App ko start karein
 const themeApp = new ThemeApp();
 themeApp.init();
