@@ -78,7 +78,7 @@ class ThemeApp {
   loadPackages() {
     const urlParams = new URLSearchParams(window.location.search);
     const themeType = urlParams.get('type');
-    console.log("Customer ne select kiya hai:", themeType);
+    console.log("The customer has selected", themeType);
   }
 }
 const themeApp = new ThemeApp();
